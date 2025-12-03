@@ -74,7 +74,42 @@ Raw (JSON) → Bronze (Parquet) → Silver (Clean) → Gold (Aggregated)
 <div align="center">
 
 [![Ver Projeto](https://img.shields.io/badge/Ver_Repositório-spark--medallion--fraud--detection-181717?style=for-the-badge&logo=github)](https://github.com/afborda/spark-medallion-fraud-detection)
-[![Gerador de Dados](https://img.shields.io/badge/Ver_Repositório-brazilian--fraud--data--generator-181717?style=for-the-badge&logo=github)](https://github.com/afborda/brazilian-fraud-data-generator)
+
+</div>
+
+---
+
+## 🇧🇷 Brazilian Fraud Data Generator
+
+<div align="center">
+
+[![Data Generator](https://img.shields.io/badge/🇧🇷_Brazilian_Fraud_Data_Generator-Open_Source-3776AB?style=for-the-badge)](https://github.com/afborda/brazilian-fraud-data-generator)
+
+**Gerador de dados sintéticos realistas de transações bancárias brasileiras**
+
+</div>
+
+Criado para suprir a falta de datasets brasileiros de qualidade para estudos de Data Engineering e Machine Learning.
+
+| 🎯 Feature | 📋 Descrição |
+|------------|---------------|
+| **Clientes** | CPF, nomes, endereços, renda (Faker pt_BR) |
+| **Transações** | PIX (45%), Cartão Crédito/Débito, TED, Boleto |
+| **Fraudes** | 8 tipos realistas (Engenharia Social, Conta Tomada, Cartão Clonado...) |
+| **Bancos** | 17 bancos com market share real (BB, Itaú, Nubank...) |
+| **Escala** | Gera 50GB+ em ~35 min com processamento paralelo |
+| **Geolocalização** | Coordenadas correlacionadas por estado |
+
+```bash
+# Gerar 10GB de dados realistas
+python3 generate.py --size 10GB --workers 8
+
+# Output: customers.json, devices.json, transactions_*.json
+```
+
+<div align="center">
+
+[![Ver Gerador](https://img.shields.io/badge/Ver_Repositório-brazilian--fraud--data--generator-181717?style=for-the-badge&logo=github)](https://github.com/afborda/brazilian-fraud-data-generator)
 
 </div>
 
@@ -156,8 +191,12 @@ Raw (JSON) → Bronze (Parquet) → Silver (Clean) → Gold (Aggregated)
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=afborda&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=afborda&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=0D1117"/>
+  <a href="https://github.com/afborda">
+    <img height="180em" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=afborda&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117"/>
+  </a>
+  <a href="https://github.com/afborda">
+    <img height="180em" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=afborda&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=0D1117"/>
+  </a>
 </div>
 
 ---
@@ -165,7 +204,9 @@ Raw (JSON) → Bronze (Parquet) → Silver (Clean) → Gold (Aggregated)
 ## 🔥 Streak Stats
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=afborda&theme=tokyonight&hide_border=true&background=0D1117&stroke=9745F5&ring=9745F5&fire=FF6B6B&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=9745F5&sideLabels=9745F5&dates=888888" alt="GitHub Streak"/>
+  <a href="https://github.com/afborda">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=afborda&theme=tokyonight&hide_border=true&background=0D1117&stroke=9745F5&ring=9745F5&fire=FF6B6B&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=9745F5&sideLabels=9745F5&dates=888888" alt="GitHub Streak"/>
+  </a>
 </div>
 
 ---
@@ -173,8 +214,12 @@ Raw (JSON) → Bronze (Parquet) → Silver (Clean) → Gold (Aggregated)
 ## 📈 Gráfico de Contribuições
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=afborda&bg_color=0D1117&color=9745F5&line=9745F5&point=FFFFFF&area=true&hide_border=true" alt="Contribution Graph"/>
+  <a href="https://github.com/afborda">
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=afborda&theme=tokyo-night&bg_color=0D1117&color=9745F5&line=9745F5&point=FFFFFF&area=true&hide_border=true&custom_title=Contribuições%20nos%20últimos%2031%20dias" alt="Contribution Graph"/>
+  </a>
 </div>
+
+> 💡 *Se o gráfico não carregar, [clique aqui](https://github.com/afborda?tab=overview) para ver no GitHub*
 
 ---
 
@@ -190,10 +235,14 @@ Raw (JSON) → Bronze (Parquet) → Silver (Clean) → Gold (Aggregated)
 
 ### 💬 *"Aplicando o rigor da Engenharia de Software na construção de Pipelines de Dados robustos"*
 
-[![LinkedIn](https://img.shields.io/badge/Vamos_conversar?-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/abner-fonseca-25658b67)
+<a href="https://linkedin.com/in/abner-fonseca-25658b67">
+  <img src="https://img.shields.io/badge/Vamos_conversar%3F-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>
 
 </div>
 
+---
+
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer"/>
+  <sub>Feito com ❤️ por Abner Fonseca</sub>
 </div>
