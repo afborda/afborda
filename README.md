@@ -91,6 +91,8 @@ Combina **processamento batch** (51M transações históricas via PySpark) com *
 
 ### 🇧🇷 SynthFin Data — `synthfin-core`
 
+<p align="center"><img src="assets/synthfin-logo.png" width="100"></p>
+
 **Gerador de dados sintéticos realistas de fraudes bancárias brasileiras**
 
 [![Ver Repositório](https://img.shields.io/badge/Ver_Repositório-synthfin--core-181717?style=for-the-badge&logo=github)](https://github.com/afborda/synthfin-core)
@@ -138,6 +140,8 @@ curl -X POST https://api.synthfin.com.br/v2/generate \
 ---
 
 ### 🛡️ Guardian Blue Team — `guardian-blue-team`
+
+<p align="center"><img src="assets/guardian-logo.png" width="100"></p>
 
 **SIEM/SOAR agentless com IA local — detecta, analisa, bloqueia e aprende**
 
