@@ -2,7 +2,7 @@
 
 # 👋 Olá, eu sou **Abner Borda Fonseca**!
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=9745F5&center=true&vCenter=true&random=false&width=700&lines=Engenheiro+Mobile+S%C3%AAnior+%F0%9F%93%B1;Em+transi%C3%A7%C3%A3o+para+Engenharia+de+Dados+%F0%9F%93%8A;Spark+%E2%80%A2+Databricks+%E2%80%A2+Delta+Lake+%E2%9A%A1;51GB+processados+em+34+min+%F0%9F%94%A5;Construindo+ferramentas+reais+em+produ%C3%A7%C3%A3o+%F0%9F%9A%80)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=9745F5&center=true&vCenter=true&random=false&width=700&lines=Senior+Information+Security+Specialist+%F0%9F%94%90;Data+Engineering+%7C+Spark+%E2%80%A2+Databricks+%E2%80%A2+Kafka;51GB+processados+em+34+min+%F0%9F%94%A5;SIEM%2FSOAR+Agentless+com+IA+Local+%F0%9F%9B%A1%EF%B8%8F;Construindo+ferramentas+reais+em+produ%C3%A7%C3%A3o+%F0%9F%9A%80)](https://git.io/typing-svg)
 
 <img src="https://komarev.com/ghpvc/?username=afborda&label=Visitantes&color=9745F5&style=flat" alt="afborda" />
 
@@ -18,8 +18,8 @@
 
 ```javascript
 const abner = {
-    cargo: "Engenheiro Mobile Sênior → Engenheiro de Dados",
-    empresa: "Cast Group (App Banco do Brasil)",
+    cargo: "Senior Information Security Specialist | Data Engineering",
+    empresa: "SAP (São Leopoldo, RS)",
     experiencia: "+5 anos em sistemas de alta escala",
 
     transicao: {
@@ -41,9 +41,9 @@ const abner = {
 
 ---
 
-## 🏗️ Projetos em Produção
+## 🏗️ Projetos
 
-> Todos os projetos abaixo estão **ativos e rodando em produção** — não são demos, são sistemas reais.
+> Projetos ativos — alguns em produção, outros em desenvolvimento.
 
 ---
 
@@ -190,12 +190,11 @@ docker compose up -d
 
 ---
 
-### 🤖 AutomaBotHub — `automabothub`
+### 🤖 AutomaBotHub *(em desenvolvimento)*
 
 **Plataforma SaaS de automações gerenciadas — n8n, Evolution API, Typebot e Chatwoot na nuvem**
 
-[![Acessar](https://img.shields.io/badge/🌐_Acessar-automabothub.com-9745F5?style=for-the-badge)](https://automabothub.com)
-[![API Docs](https://img.shields.io/badge/API_Docs-Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)](https://api.automabothub.com/api-docs)
+![Em Desenvolvimento](https://img.shields.io/badge/Status-Em_Desenvolvimento-orange?style=for-the-badge)
 
 Clientes escolhem tier de infraestrutura (Sandbox → Starter → Business → Professional → Enterprise) e as ferramentas que precisam. Stripe processa o pagamento, e em segundos containers Docker isolados sobem com subdomínio próprio e roteamento via Traefik — sem o cliente precisar configurar nada.
 
@@ -214,13 +213,6 @@ Stripe Checkout → Webhook → Provisioning Engine (XState v5)
 | **Billing** | Stripe (webhooks + planos + addons) |
 | **Workers** | Métricas, abuse detection, relatórios, limpeza de órfãos |
 | **Stack** | Node.js + TypeScript + Express + Drizzle ORM + PostgreSQL |
-
-| Link | URL |
-|------|-----|
-| 🌐 **Site** | [automabothub.com](https://automabothub.com) |
-| ⚡ **App** | [app.automabothub.com](https://app.automabothub.com) |
-| 📡 **API** | [api.automabothub.com](https://api.automabothub.com) |
-| 📖 **Swagger** | [api.automabothub.com/api-docs](https://api.automabothub.com/api-docs) |
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
@@ -273,24 +265,40 @@ Stripe Checkout → Webhook → Provisioning Engine (XState v5)
 ## 💼 Experiência Profissional
 
 ```
-🏢 Cast Group (Set 2022 - Atual)
-   └─ Engenheiro Mobile Sênior | App Banco do Brasil (PF e PJ)
+🏢 SAP (Mar 2026 - Atual)
+   └─ Senior Information Security Specialist
+      • São Leopoldo, RS
+
+🏢 Cast Group (Set 2022 - Jan 2026)
+   └─ Desenvolvedor Mobile Sênior | App Banco do Brasil (PF e PJ)
       • Apps com milhões de usuários ativos
       • Integração com APIs de alto volume transacional
       • Automação com N8N + LLMs (AI Agents)
 
 🏢 Equifax | Boa Vista (Jul 2021 - Set 2022)
-   └─ Analista de Sistemas Pleno | Produtos de Score de Crédito
+   └─ Analista de Sistemas Pleno - React Native | Score de Crédito
       • Ambiente Data-Driven
       • Telemetria e Analytics para decisões técnicas
+      • CI/CD com Bitrise · Firebase · App Store + Google Play
 
 🏢 TargetTrust (Jun 2021 - Mar 2023)
    └─ Instrutor Técnico
+      • TypeScript avançado e engenharia de software moderna
       • Lógica de programação e estruturas de dados
-      • Complexidade de algoritmos
 
 🏢 DBServer (Dez 2020 - Dez 2021)
    └─ Desenvolvedor Mobile | Consultoria varejo
+
+🏢 ilegra (Nov 2019 - Nov 2020)
+   └─ Desenvolvedor Front-end / Mobile
+      • Angular 7+ · React Native · Firebase · TypeScript
+
+🏢 ViaFlow Consultoria e Tecnologia (Abr 2019 - Out 2019)
+   └─ Desenvolvedor Júnior / UX e UI
+      • React.js · React Native · Node.js · AdobeXD · Figma
+
+🏢 Previsul Seguradora (Nov 2016 - Mar 2019)
+   └─ Estagiário → Assistente Técnico de Sistemas
 ```
 
 ---
@@ -302,6 +310,7 @@ Stripe Checkout → Webhook → Provisioning Engine (XState v5)
 | Formação Spark & Databricks (240h) | Engenharia de Dados Academy | 2025 |
 | Especialização em Banco de Dados | PostgreSQL, Tuning, NoSQL | 2024-2025 |
 | Análise e Desenvolvimento de Sistemas | UniRitter | 2019-2025 |
+| Técnico em Redes e Telecomunicações | SENAI | 2019-2025 |
 
 ---
 
