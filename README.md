@@ -49,6 +49,8 @@ const abner = {
 
 ### 🔍 Fraud Detection Pipeline — `spark-medallion-fraud-detection`
 
+<p align="center"><img src="assets/spark-logo.png" width="100"></p>
+
 **Pipeline de detecção de fraudes bancárias com arquitetura Medallion + Lambda**
 
 [![Ver Repositório](https://img.shields.io/badge/Ver_Repositório-spark--medallion--fraud--detection-181717?style=for-the-badge&logo=github)](https://github.com/afborda/spark-medallion-fraud-detection)
@@ -195,6 +197,8 @@ docker compose up -d
 ---
 
 ### 🤖 AutomaBotHub *(em desenvolvimento)*
+
+<p align="center"><img src="assets/automabothub-logo.png" width="100"></p>
 
 **Plataforma SaaS de automações gerenciadas — n8n, Evolution API, Typebot e Chatwoot na nuvem**
 
