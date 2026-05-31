@@ -2,7 +2,7 @@
 
 # 👋 Olá, eu sou **Abner Borda Fonseca**!
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=9745F5&center=true&vCenter=true&random=false&width=650&lines=Engenheiro+Mobile+S%C3%AAnior+%F0%9F%93%B1;Em+transi%C3%A7%C3%A3o+para+Engenharia+de+Dados+%F0%9F%93%8A;Spark+%E2%80%A2+Databricks+%E2%80%A2+Delta+Lake+%E2%9A%A1;51GB+processados+em+34+min+%F0%9F%94%A5)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=9745F5&center=true&vCenter=true&random=false&width=700&lines=Engenheiro+Mobile+S%C3%AAnior+%F0%9F%93%B1;Em+transi%C3%A7%C3%A3o+para+Engenharia+de+Dados+%F0%9F%93%8A;Spark+%E2%80%A2+Databricks+%E2%80%A2+Delta+Lake+%E2%9A%A1;51GB+processados+em+34+min+%F0%9F%94%A5;Construindo+ferramentas+reais+em+produ%C3%A7%C3%A3o+%F0%9F%9A%80)](https://git.io/typing-svg)
 
 <img src="https://komarev.com/ghpvc/?username=afborda&label=Visitantes&color=9745F5&style=flat" alt="afborda" />
 
@@ -30,7 +30,9 @@ const abner = {
     diferenciais: [
         "Clean Code & Design Patterns aplicados a Data Pipelines",
         "Experiência com milhões de usuários (App BB)",
-        "Automação com N8N + LLMs (AI Agents)"
+        "Automação com N8N + LLMs (AI Agents)",
+        "Segurança agentless com IA local (Guardian)",
+        "SaaS de infraestrutura gerenciada com provisionamento Docker"
     ],
 
     objetivo: "Resolver problemas complexos de dados em escala 🚀"
@@ -39,15 +41,17 @@ const abner = {
 
 ---
 
-## 🔥 Projeto Destaque: Fraud Detection Pipeline
+## 🏗️ Projetos em Produção
 
-<div align="center">
+> Todos os projetos abaixo estão **ativos e rodando em produção** — não são demos, são sistemas reais.
 
-[![Fraud Detection](https://img.shields.io/badge/🔍_Fraud_Detection-Pipeline_Completo-E25A1C?style=for-the-badge)](https://github.com/afborda/spark-medallion-fraud-detection)
+---
 
-**Pipeline de detecção de fraudes bancárias com arquitetura Medallion**
+### 🔍 Fraud Detection Pipeline — `spark-medallion-fraud-detection`
 
-</div>
+**Pipeline de detecção de fraudes bancárias com arquitetura Medallion + Lambda**
+
+[![Ver Repositório](https://img.shields.io/badge/Ver_Repositório-spark--medallion--fraud--detection-181717?style=for-the-badge&logo=github)](https://github.com/afborda/spark-medallion-fraud-detection)
 
 | 📊 Métrica | 🎯 Resultado |
 |------------|--------------|
@@ -58,60 +62,172 @@ const abner = {
 | **Fraudes Detectadas** | R$ 14.1 Bilhões protegidos |
 | **Recall** | 89.88% (captura 90% das fraudes) |
 
-### 🏗️ Arquitetura Implementada
+**Arquitetura implementada:**
 ```
 Raw (JSON) → Bronze (Parquet) → Silver (Clean) → Gold (Aggregated)
    51 GB   →      5 GB        →      5.4 GB    →     2 GB
 ```
 
-### 🌐 Demo ao Vivo
-| Serviço | Link |
-|---------|------|
-| 📊 Metabase | [metabase.abnerfonseca.com.br](https://metabase.abnerfonseca.com.br) |
-| ⚡ Spark Master | [spark.abnerfonseca.com.br](https://spark.abnerfonseca.com.br) |
-| 📦 MinIO Console | [minio.abnerfonseca.com.br](https://minio.abnerfonseca.com.br) |
+Combina **processamento batch** (51M transações históricas via PySpark) com **streaming em tempo real** (Kafka → Spark Structured Streaming, ~10 tx/s, latência ~1s) gravando no mesmo `fraud_db` — permitindo que o Metabase misture histórico e tempo real no mesmo dashboard.
 
-<div align="center">
+**Acesse ao vivo:**
 
-[![Ver Projeto](https://img.shields.io/badge/Ver_Repositório-spark--medallion--fraud--detection-181717?style=for-the-badge&logo=github)](https://github.com/afborda/spark-medallion-fraud-detection)
+| Serviço | Link | Descrição |
+|---------|------|-----------|
+| 🌊 **Dashboard Streaming** | [Fraudes em tempo real](https://metabase.abnerfonseca.com.br/public/dashboard/d43f14da-5c01-4ab4-a4a9-8e54d0bcc5dd) | Atualiza a cada 1 min |
+| 📦 **Dashboard Batch** | [Análise histórica 51M tx](http://metabase.abnerfonseca.com.br/public/dashboard/3cc49faf-2860-413a-9da8-ff82ffaba34a) | 51M transações processadas |
+| 📊 **Metabase** | [metabase.abnerfonseca.com.br](https://metabase.abnerfonseca.com.br) | Plataforma BI completa |
+| ⚡ **Spark Master** | [spark.abnerfonseca.com.br](https://spark.abnerfonseca.com.br) | Cluster com 5 workers |
+| 📦 **MinIO Console** | [minio.abnerfonseca.com.br](https://minio.abnerfonseca.com.br) | Data Lake (Object Storage) |
 
-</div>
+![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=flat&logo=apachespark&logoColor=white)
+![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=flat&logo=apachekafka&logoColor=white)
+![Python](https://img.shields.io/badge/Python_3.13-3776AB?style=flat&logo=python&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white)
+![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=flat&logo=minio&logoColor=white)
+![Metabase](https://img.shields.io/badge/Metabase-509EE3?style=flat&logo=metabase&logoColor=white)
 
 ---
 
-## 🇧🇷 Brazilian Fraud Data Generator
+### 🇧🇷 SynthFin Data — `synthfin-core`
 
-<div align="center">
+**Gerador de dados sintéticos realistas de fraudes bancárias brasileiras**
 
-[![Data Generator](https://img.shields.io/badge/🇧🇷_Brazilian_Fraud_Data_Generator-Open_Source-3776AB?style=for-the-badge)](https://github.com/afborda/brazilian-fraud-data-generator)
+[![Ver Repositório](https://img.shields.io/badge/Ver_Repositório-synthfin--core-181717?style=for-the-badge&logo=github)](https://github.com/afborda/synthfin-core)
+[![Docker Hub](https://img.shields.io/badge/Docker_Hub-afborda%2Fsynthfin--data-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/r/afborda/synthfin-data)
 
-**Gerador de dados sintéticos realistas de transações bancárias brasileiras**
-
-</div>
-
-Criado para suprir a falta de datasets brasileiros de qualidade para estudos de Data Engineering e Machine Learning.
+Criado para suprir a falta de datasets brasileiros de qualidade para estudos de Data Engineering e Machine Learning. Gera dados **realistas e labeleados**, prontos para pipelines de fraude, modelos de ML e QA de plataformas.
 
 | 🎯 Feature | 📋 Descrição |
 |------------|---------------|
-| **Clientes** | CPF, nomes, endereços, renda (Faker pt_BR) |
-| **Transações** | PIX (45%), Cartão Crédito/Débito, TED, Boleto |
-| **Fraudes** | 8 tipos realistas (Engenharia Social, Conta Tomada, Cartão Clonado...) |
-| **Bancos** | 17 bancos com market share real (BB, Itaú, Nubank...) |
+| **Qualidade ML** | AUC-ROC 0.9991 · nota 9.70/10 |
+| **Clientes** | CPF válido, nomes, endereços, renda (Faker pt_BR + Censo 2022) |
+| **Transações** | PIX (45%), Cartão Crédito/Débito, TED, Boleto — proporção real |
+| **Fraudes** | 25 padrões bancários + 11 ride-share (Engenharia Social, PIX falso, Cartão Clonado...) |
+| **Bancos** | 17 bancos com market share real (BB, Itaú, Nubank, C6...) |
 | **Escala** | Gera 50GB+ em ~35 min com processamento paralelo |
-| **Geolocalização** | Coordenadas correlacionadas por estado |
+| **Streaming** | Kafka · Webhook · stdout · Redis Stream |
+| **Geolocalização** | Coordenadas correlacionadas por estado (IBGE) |
 
 ```bash
-# Gerar 10GB de dados realistas
-python3 generate.py --size 10GB --workers 8
+# Open source — self-hosted
+python generate.py --size 10GB --workers 8 --fraud-rate 0.03 --seed 42
 
-# Output: customers.json, devices.json, transactions_*.json
+# Ou via API hospedada (beta aberto)
+curl -X POST https://api.synthfin.com.br/v2/generate \
+  -H "Authorization: Bearer YOUR_KEY" \
+  -d '{"type":"transactions","count":100000,"format":"parquet"}'
 ```
 
-<div align="center">
+**Plataforma hospedada (beta):**
 
-[![Ver Gerador](https://img.shields.io/badge/Ver_Repositório-brazilian--fraud--data--generator-181717?style=for-the-badge&logo=github)](https://github.com/afborda/brazilian-fraud-data-generator)
+| Serviço | Link |
+|---------|------|
+| 🌐 **Site** | [synthfin.com.br](https://synthfin.com.br) |
+| ⚡ **API** | [api.synthfin.com.br](https://api.synthfin.com.br) |
+| 📊 **Dashboard** | [app.synthfin.com.br](https://app.synthfin.com.br) |
 
-</div>
+> Relatório de qualidade ML (LightGBM + AUC-ROC por tipo de fraude) entregue por email após cada job. Quer testar? → [devabnerfonseca@gmail.com](mailto:devabnerfonseca@gmail.com)
+
+![Python](https://img.shields.io/badge/Python_3.10+-3776AB?style=flat&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![version](https://img.shields.io/badge/version-4.18.0-0F766E?style=flat)
+![AUC-ROC](https://img.shields.io/badge/AUC--ROC-0.9991-0F766E?style=flat)
+
+---
+
+### 🛡️ Guardian Blue Team — `guardian-blue-team`
+
+**SIEM/SOAR agentless com IA local — detecta, analisa, bloqueia e aprende**
+
+[![Ver Repositório](https://img.shields.io/badge/Ver_Repositório-guardian--blue--team-181717?style=for-the-badge&logo=github)](https://github.com/afborda/guardian-blue-team)
+[![CI](https://github.com/afborda/guardian-blue-team/actions/workflows/ci.yml/badge.svg)](https://github.com/afborda/guardian-blue-team/actions/workflows/ci.yml)
+[![Docker](https://img.shields.io/badge/Docker-ghcr.io%2Fafborda%2Fguardian--blue--team-2496ED?style=flat&logo=docker&logoColor=white)](https://ghcr.io/afborda/guardian-blue-team)
+[![Version](https://img.shields.io/badge/version-2.1.0-9745F5?style=flat)]()
+[![License](https://img.shields.io/badge/License-AGPL_v3-blue?style=flat)](https://github.com/afborda/guardian-blue-team/blob/main/LICENSE)
+
+Monitora servidores via SSH (sem instalar nada nos targets), detecta ameaças em tempo real e responde automaticamente com bloqueios permanentes no firewall. Usa **IA local** (Ollama) para análise, constrói **memória semântica** de incidentes (RAG com embeddings bge-m3) e faz **threat hunting proativo** a cada 4 horas.
+
+**Setup em 30 segundos:**
+```bash
+git clone https://github.com/afborda/guardian-blue-team.git
+cd guardian-blue-team && cp .env.example .env
+# edite .env com TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID
+docker compose up -d
+# depois: /add-server meuserver 1.2.3.4 22 root
+```
+
+| Proteção | Ameaças | Resposta |
+|----------|---------|----------|
+| **SSH** | Brute force, logins suspeitos, horários fora do padrão | Bloqueio permanente |
+| **DDoS** | SYN flood, connection rate, bandwidth anomaly (STL) | Rate-limit → escalada → bloqueio |
+| **Network** | Port scan, DGA C2 (ML ONNX), TLDs suspeitos | Bloqueio permanente |
+| **Containers** | Crypto mining, escape attempts, crashloops | Kill + bloquear |
+| **FIM** | Alteração em /etc/passwd, sudoers, sshd_config, authorized_keys | Alerta crítico |
+| **CVE** | Pacotes instalados com CVEs (OSV.dev + EPSS + CISA KEV) | Alerta + remediação |
+
+**Comparativo:**
+
+| | Fail2ban | CrowdSec | Wazuh | **Guardian** |
+|--|----------|----------|-------|:------------:|
+| Setup | 5 min | 30 min | 2+ horas | **30 segundos** |
+| Agente nos targets | Sim | Sim | Sim | **Não** |
+| IA para decisões | — | — | — | **IA local** |
+| Aprende com incidentes | — | — | — | **RAG + Embeddings** |
+| Threat hunting | — | — | — | **A cada 4h** |
+
+**Dashboard:** 12 páginas (Overview · Fleet · Incidents · CVE · Blocks · Attack Map · Intelligence)
+**Telegram Bot:** 30+ comandos — `/status`, `/block`, `/unblock`, `/ask`, `/threat <ip>`, `/report`...
+
+> Demo ao vivo em breve — por enquanto: clone, configure e rode em 5 minutos.
+
+![Node.js](https://img.shields.io/badge/Node.js_20-339933?style=flat&logo=nodedotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL_16-316192?style=flat&logo=postgresql&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-qwen3%3A4b+bge--m3-black?style=flat)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+
+---
+
+### 🤖 AutomaBotHub — `automabothub`
+
+**Plataforma SaaS de automações gerenciadas — n8n, Evolution API, Typebot e Chatwoot na nuvem**
+
+[![Acessar](https://img.shields.io/badge/🌐_Acessar-automabothub.com-9745F5?style=for-the-badge)](https://automabothub.com)
+[![API Docs](https://img.shields.io/badge/API_Docs-Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)](https://api.automabothub.com/api-docs)
+
+Clientes escolhem tier de infraestrutura (Sandbox → Starter → Business → Professional → Enterprise) e as ferramentas que precisam. Stripe processa o pagamento, e em segundos containers Docker isolados sobem com subdomínio próprio e roteamento via Traefik — sem o cliente precisar configurar nada.
+
+**Como funciona:**
+```
+Stripe Checkout → Webhook → Provisioning Engine (XState v5)
+    → Docker (containers isolados) → Traefik (HTTPS + subdomain)
+    → n8n / Evolution API / Typebot / Chatwoot
+```
+
+| Recurso | Detalhe |
+|---------|---------|
+| **Serviços** | n8n, Evolution API, Typebot, Chatwoot |
+| **Tiers** | Sandbox → Starter → Business → Professional → Enterprise |
+| **Infra** | Containers Docker isolados por cliente, subdomínio automático |
+| **Billing** | Stripe (webhooks + planos + addons) |
+| **Workers** | Métricas, abuse detection, relatórios, limpeza de órfãos |
+| **Stack** | Node.js + TypeScript + Express + Drizzle ORM + PostgreSQL |
+
+| Link | URL |
+|------|-----|
+| 🌐 **Site** | [automabothub.com](https://automabothub.com) |
+| ⚡ **App** | [app.automabothub.com](https://app.automabothub.com) |
+| 📡 **API** | [api.automabothub.com](https://api.automabothub.com) |
+| 📖 **Swagger** | [api.automabothub.com/api-docs](https://api.automabothub.com/api-docs) |
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js_15-000000?style=flat&logo=nextdotjs&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat&logo=stripe&logoColor=white)
+![n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat&logo=n8n&logoColor=white)
 
 ---
 
@@ -143,11 +259,12 @@ python3 generate.py --size 10GB --workers 8
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain_RAG-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
 ![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama_Local_AI-black?style=for-the-badge)
 
 ### ⚙️ DevOps & Infra
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![Apache](https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=apache&logoColor=white)
+![Traefik](https://img.shields.io/badge/Traefik-24A1C1?style=for-the-badge&logo=traefikproxy&logoColor=white)
 
 </div>
 
